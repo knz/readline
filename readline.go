@@ -24,6 +24,8 @@ type Config struct {
 	HistoryFile string
 	// specify the max length of historys, it's 500 by default, set it to -1 to disable history
 	HistoryLimit int
+	// Auto-register entries to the history? if unset, code needs to use PushHistory explicitly.
+	HistoryAutoAppend bool
 
 	// AutoCompleter will called once user press TAB
 	AutoComplete AutoCompleter

@@ -263,7 +263,7 @@ func (o *Operation) ioloop() {
 				o.CompleteRefresh()
 			}
 		}
-		if isUpdateHistory && !o.IsSearchMode() {
+		if isUpdateHistory && !o.IsSearchMode() && o.cfg.HistoryAutoAppend {
 			o.UpdateHistory(o.buf.Runes(), false)
 		}
 	}
